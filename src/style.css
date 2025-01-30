@@ -1,0 +1,662 @@
+/* html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    min-width: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+button,
+input { /* 1 */
+    /* Remove the default button styles */
+    overflow: visible;
+}
+
+button,
+select { /* 1 */
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] 
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 0px;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    outline-offset: -2px; /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   2. Box Sizing and Layout
+   ========================================================================== */
+
+/* Set box-sizing to border-box for all elements for easier sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Create a root flex container for layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* ==========================================================================
+   3. Typography
+   ========================================================================== */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+h1 { font-size: 4rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 4rem; }
+h4 { font-size: 3rem; }
+h5 { font-size: 2rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+    font-size: 1em;
+    text-align: left;
+}
+
+/* Links */
+a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.75em;
+}
+
+a:hover,
+a:focus {
+    color: #e68600;
+}
+
+/* ==========================================================================
+   4. Utility Classes
+   ========================================================================== */
+
+/* Utility classes for common spacing */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 3rem; }
+
+.ml-0 { margin-left: 0; }
+.ml-1 { margin-left: 0.25rem; }
+.ml-2 { margin-left: 0.5rem; }
+.ml-3 { margin-left: 1rem; }
+.ml-4 { margin-left: 1.5rem; }
+
+.mr-0 { margin-right: 0; }
+.mr-1 { margin-right: 0.25rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mr-3 { margin-right: 1rem; }
+.mr-4 { margin-right: 1.5rem; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.p-4 { padding: 1.5rem; }
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   5. Responsive Design
+   ========================================================================== */
+
+/* Define breakpoints for responsive design */
+:root {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+/* Fluid typography */
+html {
+    font-size: 100%; /* 16px */
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+    html {
+        font-size: 112.5%; /* 18px */
+    }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    html {
+        font-size: 125%; /* 20px */
+    }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+    html {
+        font-size: 137.5%; /* 22px */
+    }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+    html {
+        font-size: 150%; /* 24px */
+    }
+}
+
+/* Responsive images */
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.script {
+  background-color: var(--color-script);
+  color: #000000;
+  padding: 2em;
+  margin-top: .5em;
+  margin-bottom: 1.5em;
+  font-family: "Inconsolata";
+  max-width: 50vw;
+}
+
+.scene {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 2em;
+}
+
+.gap {
+    gap: 2em;
+}
+
+
+
+.LTD {
+   text-transform: uppercase;
+}
+
+
+.PARA {
+    text-align: center;
+}
+
+.LINE{
+    margin-right: 2em;
+    margin-left: 2em;
+    }
+
+
+.LTD, .AL, .LINE {
+    margin-bottom: 1.5em;
+}
+
+/* ==========================================================================
+   6. Accessibility Enhancements
+   ========================================================================== */
+
+/* Visually hidden class for accessibility */
+.visually-hidden { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    white-space: nowrap; 
+    border: 0; 
+}
+
+/* Focus styles */
+:focus {
+    outline: 2px dashed #1a0dab;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   7. Miscellaneous Styles
+   ========================================================================== */
+
+/* Sections */
+section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Lists */
+ul, ol {
+    padding: 0rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    border: 0px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+button:hover,
+button:focus {
+    color: #1a0dab;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Forms */
+input, select, textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1a0dab;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 13, 219, 0.25);
+}
+
+header {
+    margin-top: 1em;
+}
+
+nav {
+    text-transform: uppercase;
+    gap: 2em;
+}
+
+/* ==========================================================================
+   8. Custom Properties (CSS Variables)
+   ========================================================================== */
+
+/* Define color palette */
+:root {
+    --color-primary: #1a0dab;
+    --color-secondary: #c2c2c2;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-script: #f0f0f0;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+
+    --font-family-base: 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+}
+
+/* Apply custom properties */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+/* ==========================================================================
+   9. Vendor Prefixes (Where Necessary)
+   ========================================================================== */
+
+/* Flexbox vendor prefixes for older browsers */
+@supports not (flex: 1) {
+    .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .flex-row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    .flex-column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .justify-center {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .align-center {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+/* Transition vendor prefixes for older browsers */
+* {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   10. Media Queries for Older Browsers
+   ========================================================================== */
+
+/* IE 9 and below do not support media queries. You can use Respond.js or similar polyfills for better support if needed. */
+
+        /* Grid Container */
+        .grid-container {
+          display: grid;
+          max-width: 100vw;
+          gap: .5em;
+
+      }
+
+      .half-grid-container {
+        display: grid;
+        max-width: 100vw;
+        gap: .5em;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+      .CHR {
+        text-align: center;
+        }
+
+        .inline {
+            text-align: center;
+            justify-content: center;
+        }
+
+
+        #keycolor {
+            display: grid;
+            grid-template-columns: repeat(2, 80px);
+            justify-content: center;
+            gap: 1em;
+            margin-bottom: 2em;
+            margin-top: 1em;
+          }
+
+          .key-color-swatch {
+            width: 80px;
+            height: 80px;
+          }
+
+.center {
+    text-align: center;
+}
+
+        #palette {
+            display: grid;
+            grid-template-columns: repeat(6, 25px);
+            justify-content: center;
+            margin-bottom: 2em;
+          }
+
+          .color-swatch {
+            width: 25px;
+            height: 25px;
+          }
+
+/* Example of using media queries */
+@media (max-width: 768px) {
+  body {
+    margin: 0em;
+  } 
+  .half-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }   
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  body {
+    margin: 2em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }  
+
+}
+
+@media (min-width: 1201px) {
+  body {
+    margin: 20em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.half-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }  
+
+} */
